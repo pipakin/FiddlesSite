@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://jsfiddle.net/user/dashboard/ -->
+<html slick-uniqueid="3"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="description" edit="Test your JavaScript, CSS, HTML or CoffeeScript online with JSFiddle code editor.">
+    <meta name="keywords" edit="online javascript editor, testing javascript online, online ide, online code editor, html, css, coffeescript, scss online editor">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="author" edit="JSFiddle">
+    <meta name="copyright" content="share alike">
+
+    <link rel="stylesheet" type="text/css" href="./Fiddles_files/normalize.css">
+
+    <link rel="stylesheet" type="text/css" href="./Fiddles_files/elusive-webfont.css">
+
+    <link rel="stylesheet" type="text/css" href="./Fiddles_files/pages.css">
+
+    <script async="" src="./Fiddles_files/prum.min.js"></script><script type="text/javascript" async="" src="./Fiddles_files/ga.js"></script><script type="text/javascript" src="./Fiddles_files/moo-clientcide-1.3.js"></script>
+
+    <script type="text/javascript" src="./Fiddles_files/twipsy.js"></script>
+
+    <script type="text/javascript" src="./Fiddles_files/helpers.js"></script>
+
+    <script type="text/javascript" src="./Fiddles_files/pages.js"></script>
+
+
+    <link rel="icon" href="http://jsfiddle.net/favicon.ico">
+
+    
+
+
+    <script type="text/javascript">
+      document.addEvents({
+        domready: function(){
+          
+
+          Array.each(window.App.loadQueue, function(fn){
+            fn.call(this);
+          });
+
+          Rainbow.color();
+        }
+      });
+    </script>
+
+    
+      <script type="text/javascript">
+        var pixelRatio = (window.devicePixelRatio >= 1.5) ? "High" : "Normal";
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-366077-13']);
+        _gaq.push(['_setCustomVar', 1, 'Pixel Ratio', pixelRatio, 2]);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
+      <script>
+        var _prum = [['id', '526a363eabe53df827000000'],
+                     ['mark', 'firstbyte', (new Date()).getTime()]];
+        (function() {
+            var s = document.getElementsByTagName('script')[0]
+              , p = document.createElement('script');
+            p.async = 'async';
+            p.src = '//rum-static.pingdom.net/prum.min.js';
+            s.parentNode.insertBefore(p, s);
+        })();
+      </script>
+    
+
+    <title>AngularJS 101 Fiddles</title>
+  <style id="defaultStickyWinStyle">div.DefaultStickyWin {font-family:verdana; font-size:11px; line-height: 13px;position: relative;}div.DefaultStickyWin div.top{-moz-user-select: none;-khtml-user-select: none;}div.DefaultStickyWin div.top_ul{background:url(http://github.com/anutron/clientcide/raw/master/Assets/stickyWinHTML/full.png) top left no-repeat; height:30px; width:15px; float:left}div.DefaultStickyWin div.top_ur{position:relative; left:0px !important; left:-4px; background:url(http://github.com/anutron/clientcide/raw/master/Assets/stickyWinHTML/full.png) top right !important; height:30px; margin:0px 0px 0px 15px !important; margin-right:-4px; padding:0px}div.DefaultStickyWin h1.caption{clear: none !important; margin:0px !important; overflow: hidden; padding:0 !important; font-weight:bold; color:#555; font-size:14px !important; position:relative; top:8px !important; left:5px !important; float: left; height: 22px !important;}div.DefaultStickyWin div.middle, div.DefaultStickyWin div.closeBody {background:url(http://github.com/anutron/clientcide/raw/master/Assets/stickyWinHTML/body.png) top left repeat-y; margin:0px 20px 0px 0px !important;	margin-bottom: -3px; position: relative;	top: 0px !important; top: -3px;}div.DefaultStickyWin div.body{background:url(http://github.com/anutron/clientcide/raw/master/Assets/stickyWinHTML/body.png) top right repeat-y; padding:8px 23px 8px 0px !important; margin-left:5px !important; position:relative; right:-20px !important; z-index: 1;}div.DefaultStickyWin div.bottom{clear:both;}div.DefaultStickyWin div.bottom_ll{background:url(http://github.com/anutron/clientcide/raw/master/Assets/stickyWinHTML/full.png) bottom left no-repeat; width:15px; height:15px; float:left}div.DefaultStickyWin div.bottom_lr{background:url(http://github.com/anutron/clientcide/raw/master/Assets/stickyWinHTML/full.png) bottom right; position:relative; left:0px !important; left:-4px; margin:0px 0px 0px 15px !important; margin-right:-4px; height:15px}div.DefaultStickyWin div.closeButtons{text-align: center; background:url(http://github.com/anutron/clientcide/raw/master/Assets/stickyWinHTML/body.png) top right repeat-y; padding: 4px 30px 8px 0px; margin-left:5px; position:relative; right:-20px}div.DefaultStickyWin a.button:hover{background:url(http://github.com/anutron/clientcide/raw/master/Assets/stickyWinHTML/big_button_over.gif) repeat-x}div.DefaultStickyWin a.button {background:url(http://github.com/anutron/clientcide/raw/master/Assets/stickyWinHTML/big_button.gif) repeat-x; margin: 2px 8px 2px 8px; padding: 2px 12px; cursor:pointer; border: 1px solid #999 !important; text-decoration:none; color: #000 !important;}div.DefaultStickyWin div.closeButton{width:13px; height:13px; background:url(http://github.com/anutron/clientcide/raw/master/Assets/stickyWinHTML/closebtn.gif) no-repeat; position: absolute; right: 0px; margin:10px 15px 0px 0px !important; cursor:pointer;top:0px}div.DefaultStickyWin div.dragHandle {	width: 11px;	height: 25px;	position: relative;	top: 5px;	left: -3px;	cursor: move;	background: url(http://github.com/anutron/clientcide/raw/master/Assets/stickyWinHTML/drag_corner.gif); float: left;}</style></head>
+  <body style="zoom: 1;">
+
+    
+      <div class="contentWrap">
+        <div id="content">
+          <div id="body">
+            
+
+            
+  
+
+    <ul class="fiddleList">
+      
+        
+  <li class="item">
+    <h3>
+      <!-- TODO: make a helper out of the following -->
+      <!-- 2014-05-01 -->
+      <a href="http://jsfiddle.net/pipakin/a4yzY/" target="_new">Dependency injection example #2</a>
+      
+        
+      
+    </h3>
+
+    <p class="info">
+      <!-- TODO: make a helper out of the following -->
+      
+      AngularJS 1.1.1, HTML, CSS, JavaScript
+      
+    </p> <!-- /info -->
+
+    
+      <pre><code data-language="javascript" class="rainbow"><span class="keyword">var</span> app <span class="keyword operator">=</span> angular.<span class="function call">module</span>(<span class="string">'myApp'</span>, []);
+
+app.<span class="function call">factory</span>(<span class="string">'MyFactory'</span>, <span class="keyword">function</span>() {
+    <span class="keyword">return</span> {
+        <span class="entity function">test</span>: <span class="keyword">function</span>() {
+            <span class="function call">alert</span>(<span class="string">'Hello world!'</span>);
+        }
+    };
+});
+
+<span class="storage">var</span> <span class="entity function">controller</span> <span class="keyword operator">=</span> <span class="keyword">function</span>($scope, MyFactory ...</code></pre>
+    
+
+    <ul class="actions">
+      
+        <li class="delete"><a title="Delete fiddle" class="icon-trash" href="http://jsfiddle.net/_confirm_delete/a4yzY/" data-title="Dependency injection example #2"></a></li>
+      
+    </ul> <!-- /actions -->
+  </li> <!-- /fiddleItem -->
+
+
+      
+        
+  <li class="item">
+    <h3>
+      <!-- TODO: make a helper out of the following -->
+      <!-- 2014-05-01 -->
+      <a href="http://jsfiddle.net/pipakin/qXJPE/" target="_new">Jasmine example</a>
+      
+        
+      
+    </h3>
+
+    <p class="info">
+      <!-- TODO: make a helper out of the following -->
+      
+        A simple example of Jasmine  tests using JSFiddle
+      
+    </p> <!-- /info -->
+
+    
+      <pre><code data-language="javascript" class="rainbow"><span class="keyword">var</span> ourDataArray <span class="keyword operator">=</span> {
+    ControlPanel: {
+    CurrentInOrder: <span class="constant numeric">1</span>
+    },
+    Questions: [{
+        Text: <span class="string">"Do we like to test?"</span>
+    }, {
+        Text: <span class="string">"Do we have to test?"</span>
+    }, {
+        Text: "Why ...</code></pre>
+    
+
+    <ul class="actions">
+      
+        <li class="delete"><a title="Delete fiddle" class="icon-trash" href="http://jsfiddle.net/_confirm_delete/qXJPE/" data-title="Jasmine example"></a></li>
+      
+    </ul> <!-- /actions -->
+  </li> <!-- /fiddleItem -->
+
+
+      
+        
+  <li class="item">
+    <h3>
+      <!-- TODO: make a helper out of the following -->
+      <!-- 2014-05-01 -->
+      <a href="http://jsfiddle.net/pipakin/mJ9dJ/" target="_new">Promise Example</a>
+      
+        
+      
+    </h3>
+
+    <p class="info">
+      <!-- TODO: make a helper out of the following -->
+      
+      jQuery 1.11.0, HTML, CSS, JavaScript
+      
+    </p> <!-- /info -->
+
+    
+      <pre><code data-language="javascript" class="rainbow"><span class="keyword">var</span> myApp <span class="keyword operator">=</span> angular.<span class="function call">module</span>(<span class="string">'myApp'</span>,[]);
+
+myApp.<span class="function call">controller</span>(<span class="string">'NetflixController'</span>, [<span class="string">'$scope'</span>, <span class="string">'$http'</span>, <span class="keyword">function</span>($scope, $http) {
+    <span class="entity function">$scope.get</span> <span class="keyword operator">=</span> <span class="keyword">function</span>(value) {
+        <span class="keyword">if</span>($scope.title ...</code></pre>
+    
+
+    <ul class="actions">
+      
+        <li class="delete"><a title="Delete fiddle" class="icon-trash" href="http://jsfiddle.net/_confirm_delete/mJ9dJ/" data-title="Promise Example"></a></li>
+      
+    </ul> <!-- /actions -->
+  </li> <!-- /fiddleItem -->
+
+
+      
+        
+  <li class="item">
+    <h3>
+      <!-- TODO: make a helper out of the following -->
+      <!-- 2014-05-01 -->
+      <a href="http://jsfiddle.net/pipakin/DBdEv/" target="_new">Dependency injection example</a>
+      
+        
+      
+    </h3>
+
+    <p class="info">
+      <!-- TODO: make a helper out of the following -->
+      
+      AngularJS 1.1.1, HTML, CSS, JavaScript
+      
+    </p> <!-- /info -->
+
+    
+      <pre><code data-language="javascript" class="rainbow"><span class="keyword">var</span> app <span class="keyword operator">=</span> angular.<span class="function call">module</span>(<span class="string">'myApp'</span>, []);
+
+app.<span class="function call">factory</span>(<span class="string">'MyFactory'</span>, <span class="keyword">function</span>() {
+    <span class="keyword">return</span> {
+        <span class="entity function">test</span>: <span class="keyword">function</span>() {
+            <span class="function call">alert</span>(<span class="string">'Hello world!'</span>);
+        }
+    };
+});
+
+app.<span class="function call">controller</span>(<span class="string">'MainCtrl'</span>, [<span class="string">'$scope'</span>, 'MyFactory ...</code></pre>
+    
+
+    <ul class="actions">
+      
+        <li class="delete"><a title="Delete fiddle" class="icon-trash" href="http://jsfiddle.net/_confirm_delete/DBdEv/" data-title="Dependency injection example"></a></li>
+      
+    </ul> <!-- /actions -->
+  </li> <!-- /fiddleItem -->
+
+
+      
+        
+  <li class="item">
+    <h3>
+      <!-- TODO: make a helper out of the following -->
+      <!-- 2014-05-01 -->
+      <a href="http://jsfiddle.net/pipakin/j7js3/" target="_new">Service Example</a>
+      
+        
+      
+    </h3>
+
+    <p class="info">
+      <!-- TODO: make a helper out of the following -->
+      
+      jQuery 1.11.0, HTML, CSS, JavaScript
+      
+    </p> <!-- /info -->
+
+    
+      <pre><code data-language="javascript" class="rainbow">angular.
+ module(<span class="string">'myServiceModule'</span>, []).
+  <span class="function call">controller</span>(<span class="string">'MyController'</span>, [<span class="string">'$scope'</span>,'notify', <span class="storage function">function</span> ($scope, notify) {
+    <span class="entity function">$scope.callNotify</span> <span class="keyword operator">=</span> <span class="keyword">function</span>(msg) {
+      <span class="function call">notify</span>(msg);
+    };
+  }]).
+ <span class="function call">factory</span>(<span class="string">'notify'</span>, [<span class="string">'$window'</span>, <span class="keyword">function</span> ...</code></pre>
+    
+
+    <ul class="actions">
+      
+        <li class="delete"><a title="Delete fiddle" class="icon-trash" href="http://jsfiddle.net/_confirm_delete/j7js3/" data-title="Service Example"></a></li>
+      
+    </ul> <!-- /actions -->
+  </li> <!-- /fiddleItem -->
+
+
+      
+        
+  <li class="item">
+    <h3>
+      <!-- TODO: make a helper out of the following -->
+      <!-- 2014-05-01 -->
+      <a href="http://jsfiddle.net/pipakin/4Uju5/" target="_new">Controller Example</a>
+      
+        
+      
+    </h3>
+
+    <p class="info">
+      <!-- TODO: make a helper out of the following -->
+      
+      jQuery 1.11.0, HTML, CSS, JavaScript
+      
+    </p> <!-- /info -->
+
+    
+      <pre><code data-language="javascript" class="rainbow"><span class="keyword">var</span> myApp <span class="keyword operator">=</span> angular.<span class="function call">module</span>(<span class="string">'myApp'</span>,[]);
+
+myApp.<span class="function call">controller</span>(<span class="string">'DoubleController'</span>, [<span class="string">'$scope'</span>, <span class="keyword">function</span>($scope) {
+  <span class="entity function">$scope.double</span> <span class="keyword operator">=</span> <span class="keyword">function</span>(value) { <span class="keyword">return</span> value <span class="keyword operator">*</span> <span class="constant numeric">2</span>; };
+}]);</code></pre>
+    
+
+    <ul class="actions">
+      
+        <li class="delete"><a title="Delete fiddle" class="icon-trash" href="http://jsfiddle.net/_confirm_delete/4Uju5/" data-title="Controller Example"></a></li>
+      
+    </ul> <!-- /actions -->
+  </li> <!-- /fiddleItem -->
+
+
+      
+        
+  <li class="item">
+    <h3>
+      <!-- TODO: make a helper out of the following -->
+      <!-- 2014-05-01 -->
+      <a href="http://jsfiddle.net/pipakin/n5tBK/" target="_new">Directive Examle</a>
+      
+        
+      
+    </h3>
+
+    <p class="info">
+      <!-- TODO: make a helper out of the following -->
+      
+      jQuery 1.11.0, HTML, CSS, JavaScript
+      
+    </p> <!-- /info -->
+
+    
+      <pre><code data-language="javascript" class="rainbow"><span class="keyword">var</span> app <span class="keyword operator">=</span> angular.<span class="function call">module</span>(<span class="string">'exampleApp'</span>, []);
+                                       
+app.<span class="function call">directive</span>(<span class="string">'blink'</span>, <span class="keyword">function</span>($timeout) {
+    <span class="keyword">return</span> {
+        restrict: <span class="string">'E'</span>,
+        transclude: <span class="constant language">true</span>,
+        scope: {},
+        <span class="entity function">controller</span>: <span class="keyword">function</span>($scope, $element ...</code></pre>
+    
+
+    <ul class="actions">
+      
+        <li class="delete"><a title="Delete fiddle" class="icon-trash" href="http://jsfiddle.net/_confirm_delete/n5tBK/" data-title="Directive Examle"></a></li>
+      
+    </ul> <!-- /actions -->
+  </li> <!-- /fiddleItem -->
+
+
+      
+        
+  <li class="item">
+    <h3>
+      <!-- TODO: make a helper out of the following -->
+      <!-- 2014-05-01 -->
+      <a href="http://jsfiddle.net/pipakin/H3drj/" target="_new">$scope Example</a>
+      
+        
+      
+    </h3>
+
+    <p class="info">
+      <!-- TODO: make a helper out of the following -->
+      
+      jQuery 1.11.0, HTML, CSS, JavaScript
+      
+    </p> <!-- /info -->
+
+    
+      <pre><code data-language="javascript" class="rainbow">var myApp <span class="keyword operator">=</span> angular.<span class="function call">module</span>('scopeInheritance', []);
+myApp.<span class="function call">controller</span>('MainController', ['$scope', <span class="function call">function</span>($scope) {
+  $scope.timeOfDay <span class="keyword operator">=</span> 'morning';
+  $scope.name <span class="keyword operator">=</span> 'Nikki';
+}]);
+myApp.<span class="function call">controller</span>('ChildController ...</code></pre>
+    
+
+    <ul class="actions">
+      
+        <li class="delete"><a title="Delete fiddle" class="icon-trash" href="http://jsfiddle.net/_confirm_delete/H3drj/" data-title="$scope Example"></a></li>
+      
+    </ul> <!-- /actions -->
+  </li> <!-- /fiddleItem -->
+
+
+      
+        
+  <li class="item">
+    <h3>
+      <!-- TODO: make a helper out of the following -->
+      <!-- 2014-05-01 -->
+      <a href="http://jsfiddle.net/pipakin/g52FY/" target="_new">AngularJS Calculator</a>
+      
+        
+      
+    </h3>
+
+    <p class="info">
+      <!-- TODO: make a helper out of the following -->
+      
+      jQuery 1.11.0, HTML, CSS, JavaScript
+      
+    </p> <!-- /info -->
+
+    
+      <pre><code data-language="html" class="rainbow"><span class="support tag"><span class="support tag">&lt;</span><span class="support tag-name">div</span></span> ng-app<span class="support tag close">&gt;</span>
+    <span class="support tag"><span class="support tag">&lt;</span><span class="support tag-name">input</span></span> <span class="support attribute">type</span><span class="support operator">=</span><span class="string quote">"</span><span class="string value">text</span><span class="string quote">"</span> <span class="support attribute">ng-model</span><span class="support operator">=</span><span class="string quote">"</span><span class="string value">text1</span><span class="string quote">"</span> <span class="support tag close">/&gt;</span> +     
+    <span class="support tag"><span class="support tag">&lt;</span><span class="support tag-name">input</span></span> <span class="support attribute">type</span><span class="support operator">=</span><span class="string quote">"</span><span class="string value">text</span><span class="string quote">"</span> <span class="support attribute">ng-model</span><span class="support operator">=</span><span class="string quote">"</span><span class="string value">text2</span><span class="string quote">"</span> <span class="support tag close">/&gt;</span> = 
+    {{ (text1 - 0) + (text2 - 0) }}
+<span class="support tag"><span class="support tag">&lt;</span><span class="support tag special">/</span><span class="support tag-name">div</span></span><span class="support tag close">&gt;</span></code></pre>
+    
+
+    <ul class="actions">
+      
+        <li class="delete"><a title="Delete fiddle" class="icon-trash" href="http://jsfiddle.net/_confirm_delete/g52FY/" data-title="AngularJS Calculator"></a></li>
+      
+    </ul> <!-- /actions -->
+  </li> <!-- /fiddleItem -->
+
+
+      
+        
+  <li class="item">
+    <h3>
+      <!-- TODO: make a helper out of the following -->
+      <!-- 2014-05-01 -->
+      <a href="http://jsfiddle.net/pipakin/NL26F/" target="_new">JQuery Caculator</a>
+      
+        
+      
+    </h3>
+
+    <p class="info">
+      <!-- TODO: make a helper out of the following -->
+      
+      jQuery 1.11.0, HTML, CSS, JavaScript
+      
+    </p> <!-- /info -->
+
+    
+      <pre><code data-language="javascript" class="rainbow"><span class="selector">$</span>(<span class="keyword">function</span>(){
+   <span class="selector"> $</span>(<span class="string">'.operand'</span>).<span class="function call">on</span>(<span class="string">"change keyup paste cut"</span>, <span class="keyword">function</span>() {
+       <span class="selector"> $</span>(<span class="string">'#span1'</span>).<span class="function call">html</span>(($(<span class="string">'#text1'</span>).<span class="function call">val</span>() <span class="keyword operator">-</span> <span class="constant numeric">0</span>) <span class="keyword operator">+</span>  ($(<span class="string">'#text2'</span>).<span class="function call">val</span>() <span class="keyword operator">-</span> <span class="constant numeric">0</span>));
+    });
+});
+</code></pre>
+    
+
+    <ul class="actions">
+      
+        <li class="delete"><a title="Delete fiddle" class="icon-trash" href="http://jsfiddle.net/_confirm_delete/NL26F/" data-title="JQuery Caculator"></a></li>
+      
+    </ul> <!-- /actions -->
+  </li> <!-- /fiddleItem -->
+
+  <li class="item">
+    <h3>
+      <!-- TODO: make a helper out of the following -->
+      <!-- 2014-05-01 -->
+      <a href="/pipakin/K6Hmd/">Basic Javascript Caculator</a>
+      
+        
+      
+    </h3>
+
+    <p class="info">
+      <!-- TODO: make a helper out of the following -->
+      
+      No-Library (pure JS), HTML, CSS, JavaScript
+      
+    </p> <!-- /info -->
+
+    
+      <pre><code data-language="javascript">function textChangedHack() {
+    setTimeout(function() { textChanged() }, 50);
+}
+function textChanged() {
+    var t1Val = document.getElementById(&quot;text1&quot;).value - 0;
+    var t2Val = document.getElementById(&quot;text2 ...</code></pre>
+    
+
+    <ul class="actions">
+      
+        <li class="delete"><a title="Delete fiddle" class="icon-trash" href="/_confirm_delete/K6Hmd/" data-title="Basic Javascript Caculator"></a></li>
+      
+    </ul> <!-- /actions -->
+  </li> <!-- /fiddleItem -->
+
+
+      
+        
+  <li class="item">
+    <h3>
+      <!-- TODO: make a helper out of the following -->
+      <!-- 2014-05-01 -->
+      <a href="/pipakin/pY72R/">Angular Nav Example</a>
+      
+        
+      
+    </h3>
+
+    <p class="info">
+      <!-- TODO: make a helper out of the following -->
+      
+      jQuery 1.11.0, HTML, CSS, JavaScript
+      
+    </p> <!-- /info -->
+
+    
+      <pre><code data-language="html">&lt;!-- Adding the ng-app declaration to initialize AngularJS --&gt;
+&lt;div id=&quot;main&quot; ng-app&gt;
+	&lt;!-- The navigation menu will get the value of the &quot;active&quot; variable as a class.
+		 The $event.preventDefault() stops the page from jumping when a link is clicked. --&gt;
+
+	&lt;nav class=&quot;{{active}}&quot; ng-click=&quot;$event.preventDefault()&quot;&gt;
+
+		&lt;!-- When a link in the menu is clicked, we set the active variable --&gt;
+
+		&lt;a href=&quot;#&quot; class=&quot;home&quot; ng-click=&quot;active=&#39;home&#39;&quot;&gt;Home&lt;/a&gt;
+		&lt;a href=&quot;#&quot; class=&quot;projects&quot; ng-click=&quot;active=&#39;projects&#39;&quot;&gt;Projects&lt;/a&gt;
+		&lt;a href=&quot;#&quot; class=&quot;services&quot; ng-click=&quot;active=&#39;services&#39;&quot;&gt;Services&lt;/a&gt;
+		&lt;a href=&quot;#&quot; class=&quot;contact&quot; ng-click=&quot;active=&#39;contact&#39;&quot;&gt;Contact&lt;/a&gt;
+	&lt;/nav&gt;
+
+	&lt;!-- ng-show will show an element if the value in the quotes is truthful,
+		 while ng-hide does the opposite. Because the active variable is not set
+		 initially, this will cause the first paragraph to be visible. --&gt;
+
+	&lt;p ng-hide=&quot;active&quot;&gt;Please click a menu item&lt;/p&gt;
+	&lt;p ng-show=&quot;active&quot;&gt;You chose &lt;b&gt;{{active}}&lt;/b&gt;&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+    
+
+    <ul class="actions">
+      
+        <li class="delete"><a title="Delete fiddle" class="icon-trash" href="/_confirm_delete/pY72R/" data-title="Angular Nav Example"></a></li>
+      
+    </ul> <!-- /actions -->
+  </li> <!-- /fiddleItem -->
+
+      
+    </ul> <!-- /fiddleList -->
+
+  
+          </div> <!-- /body -->
+        </div> <!-- /content -->
+      </div> <!-- /contentWrap -->
+
+     
+    
+
+    <link rel="stylesheet" type="text/css" href="./Fiddles_files/sunburst.css">
+
+    <script type="text/javascript" src="./Fiddles_files/rainbow.js"></script>
+
+    <script type="text/javascript" src="./Fiddles_files/generic.js"></script>
+
+    <script type="text/javascript" src="./Fiddles_files/javascript.js"></script>
+
+    <script type="text/javascript" src="./Fiddles_files/html.js"></script>
+
+  
+
+</body></html>
